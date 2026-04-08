@@ -18,14 +18,6 @@ npm run build
 npm run preview
 ```
 
-## Деплой
-
-Добавлен GitHub Actions workflow `.github/workflows/deploy-pages.yml` для публикации на GitHub Pages при пуше в `main`.
-
-После первого пуша и выполнения workflow сайт будет доступен по адресу:
-
-`https://<github-username>.github.io/<repo-name>/`
-
 ## Структура
 
 - `src/pages` — экраны приложения
