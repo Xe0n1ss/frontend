@@ -1,0 +1,107 @@
+:root {
+  /* Layout */
+  --screen-max-width: 430px;
+  --page-padding-x: 16px;
+  --page-padding-y: 12px;
+  --section-gap: 16px;
+  --content-gap: 12px;
+  --bottom-nav-height: 72px;
+  --top-bar-height: 56px;
+
+  /* Colors */
+  --color-bg: #E6E6E6;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F2F2F2;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+
+  --color-text: #111111;
+  --color-text-secondary: #6F6F6F;
+  --color-text-muted: #9A9A9A;
+  --color-border: #D9D9D9;
+
+  /* Accent colors
+     Фон #E6E6E6 точный из Figma.
+     Остальные лучше еще добрать пипеткой из макета,
+     но для старта можно взять такие близкие значения. */
+  --color-purple: #7B4DFF;
+  --color-purple-hover: #6A3DF0;
+  --color-lime: #D8FF39;
+  --color-lime-hover: #C9F220;
+  --color-orange: #FF9566;
+
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Semantic */
+  --app-bg: var(--color-bg);
+  --card-bg: var(--color-surface);
+  --card-text: var(--color-text);
+
+  --search-bg: var(--color-black);
+  --search-text: var(--color-white);
+  --search-placeholder: rgba(255, 255, 255, 0.72);
+
+  --chip-bg: var(--color-surface);
+  --chip-text: var(--color-text);
+  --chip-active-bg: var(--color-lime);
+  --chip-active-text: var(--color-black);
+
+  --tab-bg: var(--color-surface);
+  --tab-text: var(--color-text);
+  --tab-active-bg: var(--color-purple);
+  --tab-active-text: var(--color-white);
+
+  --button-primary-bg: var(--color-black);
+  --button-primary-text: var(--color-white);
+  --button-secondary-bg: var(--color-purple);
+  --button-secondary-text: var(--color-white);
+  --button-accent-bg: var(--color-lime);
+  --button-accent-text: var(--color-black);
+
+  /* Typography */
+  --font-family-base: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 28px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.35;
+  --line-height-relaxed: 1.5;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 28px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-card: 0 6px 18px rgba(0, 0, 0, 0.06);
+  --shadow-floating: 0 10px 24px rgba(0, 0, 0, 0.12);
+
+  /* Motion */
+  --transition-fast: 120ms ease;
+  --transition-base: 180ms ease;
+}
