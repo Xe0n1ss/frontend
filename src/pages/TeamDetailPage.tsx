@@ -1,10 +1,10 @@
-import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
+import ArrowBackSharpIcon from "@mui/icons-material/ArrowBackSharp";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
-import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded";
-import FlagRoundedIcon from "@mui/icons-material/FlagRounded";
-import AutoGraphRoundedIcon from "@mui/icons-material/AutoGraphRounded";
-import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
+import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp";
+import EmojiEventsSharpIcon from "@mui/icons-material/EmojiEventsSharp";
+import FlagSharpIcon from "@mui/icons-material/FlagSharp";
+import AutoGraphSharpIcon from "@mui/icons-material/AutoGraphSharp";
+import AutoAwesomeSharpIcon from "@mui/icons-material/AutoAwesomeSharp";
 import type { TeamListing } from "../../types/team";
 
 type TeamDetailPageProps = {
@@ -43,7 +43,7 @@ export function TeamDetailPage({
   return (
     <section className="page-section">
       <button className="toolbar-pill" type="button" onClick={onBack}>
-        <ArrowBackRoundedIcon fontSize="inherit" />
+        <ArrowBackSharpIcon fontSize="inherit" />
         Назад к командам
       </button>
 
@@ -55,7 +55,7 @@ export function TeamDetailPage({
             <p>{team.eventName}</p>
           </div>
           <div className={`health-pill health-pill--${healthTone}`}>
-            <FavoriteRoundedIcon sx={{ fontSize: 16 }} />
+            <FavoriteSharpIcon sx={{ fontSize: 16 }} />
             <strong>{activityScore}/100</strong>
             <span>health</span>
           </div>
@@ -79,7 +79,7 @@ export function TeamDetailPage({
 
         <article className="study-card study-card--metric">
           <div className="study-card__icon">
-            <FlagRoundedIcon fontSize="small" />
+            <FlagSharpIcon fontSize="small" />
           </div>
           <strong>{team.participantsCount}</strong>
           <h3>Состав команды</h3>
@@ -88,7 +88,7 @@ export function TeamDetailPage({
 
         <article className="study-card study-card--metric">
           <div className="study-card__icon">
-            <EmojiEventsRoundedIcon fontSize="small" />
+            <EmojiEventsSharpIcon fontSize="small" />
           </div>
           <strong>{achievementsCount}</strong>
           <h3>Прогресс</h3>
@@ -104,7 +104,7 @@ export function TeamDetailPage({
               <h3>Текущий ритм команды</h3>
             </div>
             <div className="study-card__icon">
-              <AutoGraphRoundedIcon fontSize="small" />
+              <AutoGraphSharpIcon fontSize="small" />
             </div>
           </div>
           <p className="study-card__lead">
@@ -125,7 +125,7 @@ export function TeamDetailPage({
               <h3>Что важно команде</h3>
             </div>
             <div className="study-card__icon">
-              <AutoAwesomeRoundedIcon fontSize="small" />
+              <AutoAwesomeSharpIcon fontSize="small" />
             </div>
           </div>
           <div className="study-achievements">

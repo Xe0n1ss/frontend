@@ -1,5 +1,5 @@
-import NotificationsNoneRoundedIcon from "@mui/icons-material/NotificationsNoneRounded";
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import NotificationsNoneSharpIcon from "@mui/icons-material/NotificationsNoneSharp";
+import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 
 type HeaderProps = {
   title?: string;
@@ -15,12 +15,12 @@ export function Header({ title, subtitle, showSearch = true, onSearchClick }: He
 
       <div className="mobile-header__row">
         <button className="icon-button" type="button" aria-label="Уведомления">
-          <NotificationsNoneRoundedIcon fontSize="small" />
+          <NotificationsNoneSharpIcon fontSize="small" />
         </button>
 
         {showSearch ? (
           <button className="icon-button" type="button" aria-label="Открыть поиск" onClick={onSearchClick}>
-            <SearchRoundedIcon fontSize="small" />
+            <SearchSharpIcon fontSize="small" />
           </button>
         ) : (
           <div className="mobile-header__spacer" />

@@ -1,5 +1,5 @@
-import LoginRoundedIcon from "@mui/icons-material/LoginRounded";
-import PersonAddAlt1RoundedIcon from "@mui/icons-material/PersonAddAlt1Rounded";
+import LoginSharpIcon from "@mui/icons-material/LoginSharp";
+import PersonAddAlt1SharpIcon from "@mui/icons-material/PersonAddAlt1Sharp";
 import { useState } from "react";
 import { login, register, type RegisterPayload } from "../../services/auth.service";
 
@@ -98,7 +98,7 @@ export function AuthPage({ onAuthSuccess, onNavigate }: AuthPageProps) {
         <form className="auth-card auth-form" onSubmit={handleLoginSubmit}>
           <div className="auth-card__header">
             <div className="study-card__icon">
-              <LoginRoundedIcon fontSize="small" />
+              <LoginSharpIcon fontSize="small" />
             </div>
             <div>
               <h2>Войти в профиль</h2>
@@ -136,7 +136,7 @@ export function AuthPage({ onAuthSuccess, onNavigate }: AuthPageProps) {
         <form className="auth-card auth-form" onSubmit={handleRegisterSubmit}>
           <div className="auth-card__header">
             <div className="study-card__icon">
-              <PersonAddAlt1RoundedIcon fontSize="small" />
+              <PersonAddAlt1SharpIcon fontSize="small" />
             </div>
             <div>
               <h2>Создать участника</h2>

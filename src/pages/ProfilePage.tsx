@@ -1,13 +1,13 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
-import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded";
-import InsightsRoundedIcon from "@mui/icons-material/InsightsRounded";
-import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
-import LinkRoundedIcon from "@mui/icons-material/LinkRounded";
-import QueryStatsRoundedIcon from "@mui/icons-material/QueryStatsRounded";
-import UpdateRoundedIcon from "@mui/icons-material/UpdateRounded";
-import WorkspacePremiumRoundedIcon from "@mui/icons-material/WorkspacePremiumRounded";
-import MilitaryTechRoundedIcon from "@mui/icons-material/MilitaryTechRounded";
-import LocalActivityRoundedIcon from "@mui/icons-material/LocalActivityRounded";
+import EmojiEventsSharpIcon from "@mui/icons-material/EmojiEventsSharp";
+import InsightsSharpIcon from "@mui/icons-material/InsightsSharp";
+import AutoAwesomeSharpIcon from "@mui/icons-material/AutoAwesomeSharp";
+import LinkSharpIcon from "@mui/icons-material/LinkSharp";
+import QueryStatsSharpIcon from "@mui/icons-material/QueryStatsSharp";
+import UpdateSharpIcon from "@mui/icons-material/UpdateSharp";
+import WorkspacePremiumSharpIcon from "@mui/icons-material/WorkspacePremiumSharp";
+import MilitaryTechSharpIcon from "@mui/icons-material/MilitaryTechSharp";
+import LocalActivitySharpIcon from "@mui/icons-material/LocalActivitySharp";
 import { useEffect, useState } from "react";
 import { getProfile } from "../../services/profile.service";
 
@@ -189,19 +189,19 @@ export function ProfilePage() {
 
       <div className="profile-stats">
         <article className="profile-stat-card">
-          <InsightsRoundedIcon fontSize="small" />
+          <InsightsSharpIcon fontSize="small" />
           <strong>{profile.githubStats.repos}</strong>
           <span>репозиториев</span>
         </article>
 
         <article className="profile-stat-card">
-          <AutoAwesomeRoundedIcon fontSize="small" />
+          <AutoAwesomeSharpIcon fontSize="small" />
           <strong>{profile.githubStats.stars}</strong>
           <span>pull requests</span>
         </article>
 
         <article className="profile-stat-card">
-          <EmojiEventsRoundedIcon fontSize="small" />
+          <EmojiEventsSharpIcon fontSize="small" />
           <strong>{profile.githubStats.contributions}</strong>
           <span>коммитов</span>
         </article>
@@ -210,7 +210,7 @@ export function ProfilePage() {
       <div className="profile-github-grid">
         <article className="profile-detail-card">
           <div className="profile-detail-card__icon">
-            <LinkRoundedIcon fontSize="small" />
+            <LinkSharpIcon fontSize="small" />
           </div>
           <div>
             <strong>Репозиторий</strong>
@@ -220,7 +220,7 @@ export function ProfilePage() {
 
         <article className="profile-detail-card">
           <div className="profile-detail-card__icon">
-            <QueryStatsRoundedIcon fontSize="small" />
+            <QueryStatsSharpIcon fontSize="small" />
           </div>
           <div>
             <strong>Индекс активности</strong>
@@ -230,7 +230,7 @@ export function ProfilePage() {
 
         <article className="profile-detail-card">
           <div className="profile-detail-card__icon">
-            <UpdateRoundedIcon fontSize="small" />
+            <UpdateSharpIcon fontSize="small" />
           </div>
           <div>
             <strong>Последний коммит</strong>
@@ -285,15 +285,15 @@ export function ProfilePage() {
 
                 <div className="season-badges season-badges--stats">
                   <span className="season-badge season-badge--metric">
-                    <LocalActivityRoundedIcon sx={{ fontSize: 16 }} />
+                    <LocalActivitySharpIcon sx={{ fontSize: 16 }} />
                     {season.eventsParticipated} событий
                   </span>
                   <span className="season-badge season-badge--metric">
-                    <EmojiEventsRoundedIcon sx={{ fontSize: 16 }} />
+                    <EmojiEventsSharpIcon sx={{ fontSize: 16 }} />
                     {season.winsCount} побед
                   </span>
                   <span className="season-badge season-badge--metric">
-                    <MilitaryTechRoundedIcon sx={{ fontSize: 16 }} />
+                    <MilitaryTechSharpIcon sx={{ fontSize: 16 }} />
                     {season.certificatesCount} сертификатов
                   </span>
                 </div>
@@ -305,7 +305,7 @@ export function ProfilePage() {
             {profile.results.map((result) => (
               <article key={result.id} className="result-card">
                 <div className="result-card__icon">
-                  <WorkspacePremiumRoundedIcon fontSize="small" />
+                  <WorkspacePremiumSharpIcon fontSize="small" />
                 </div>
                 <div className="result-card__content">
                   <div className="result-card__meta">

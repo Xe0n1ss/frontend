@@ -1,9 +1,9 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
-import FlagRoundedIcon from "@mui/icons-material/FlagRounded";
-import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
-import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded";
-import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
-import AutoGraphRoundedIcon from "@mui/icons-material/AutoGraphRounded";
+import FlagSharpIcon from "@mui/icons-material/FlagSharp";
+import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp";
+import EmojiEventsSharpIcon from "@mui/icons-material/EmojiEventsSharp";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import AutoGraphSharpIcon from "@mui/icons-material/AutoGraphSharp";
 import { useEffect, useMemo, useState } from "react";
 import { getProfile } from "../../services/profile.service";
 import { getTeams } from "../../services/members.service";
@@ -94,14 +94,14 @@ export function StudyTrackerPage() {
         title: "Командный фокус",
         value: teamCount,
         caption: "команд следят за прогрессом",
-        icon: <FlagRoundedIcon fontSize="small" />,
+        icon: <FlagSharpIcon fontSize="small" />,
       },
       {
         id: "wins",
         title: "Достижения",
         value: profile?.achievements.length ?? 0,
         caption: "ачивок уже открыто",
-        icon: <EmojiEventsRoundedIcon fontSize="small" />,
+        icon: <EmojiEventsSharpIcon fontSize="small" />,
       },
     ],
     [profile, teamCount]
@@ -141,7 +141,7 @@ export function StudyTrackerPage() {
 
         <div className="study-hero__footer">
           <div className={`health-pill health-pill--${healthTone}`}>
-            <FavoriteRoundedIcon sx={{ fontSize: 16 }} />
+            <FavoriteSharpIcon sx={{ fontSize: 16 }} />
             <strong>{healthScore}/100</strong>
             <span>health status</span>
           </div>
@@ -171,7 +171,7 @@ export function StudyTrackerPage() {
             <h3>Что проверить перед следующим пушем</h3>
           </div>
           <button type="button" className="study-card__action" aria-label="Открыть все шаги">
-            <ArrowForwardIosRoundedIcon sx={{ fontSize: 12 }} />
+            <ArrowForwardIosSharpIcon sx={{ fontSize: 12 }} />
           </button>
         </div>
 
@@ -193,7 +193,7 @@ export function StudyTrackerPage() {
               <h3>GitHub синхронизация</h3>
             </div>
             <div className="study-card__icon">
-              <AutoGraphRoundedIcon fontSize="small" />
+              <AutoGraphSharpIcon fontSize="small" />
             </div>
           </div>
           <p className="study-card__lead">
@@ -215,7 +215,7 @@ export function StudyTrackerPage() {
               <h3>Последние ачивки</h3>
             </div>
             <div className="study-card__icon">
-              <EmojiEventsRoundedIcon fontSize="small" />
+              <EmojiEventsSharpIcon fontSize="small" />
             </div>
           </div>
           <div className="study-achievements">

@@ -1,7 +1,7 @@
-import AddBusinessRoundedIcon from "@mui/icons-material/AddBusinessRounded";
-import CalendarTodayRoundedIcon from "@mui/icons-material/CalendarTodayRounded";
-import PublishRoundedIcon from "@mui/icons-material/PublishRounded";
-import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
+import AddBusinessSharpIcon from "@mui/icons-material/AddBusinessSharp";
+import CalendarTodaySharpIcon from "@mui/icons-material/CalendarTodaySharp";
+import PublishSharpIcon from "@mui/icons-material/PublishSharp";
+import ArrowBackSharpIcon from "@mui/icons-material/ArrowBackSharp";
 import type { FormEvent } from "react";
 import { useState } from "react";
 
@@ -41,7 +41,7 @@ export function OrganizerPage({ onBack }: OrganizerPageProps) {
   return (
     <section className="page-section">
       <button className="toolbar-pill" type="button" onClick={onBack}>
-        <ArrowBackRoundedIcon fontSize="inherit" />
+        <ArrowBackSharpIcon fontSize="inherit" />
         Назад на главную
       </button>
 
@@ -54,7 +54,7 @@ export function OrganizerPage({ onBack }: OrganizerPageProps) {
       <form className="organizer-form" onSubmit={handleSubmit}>
         <div className="organizer-form__header">
           <div className="organizer-form__icon">
-            <AddBusinessRoundedIcon fontSize="small" />
+            <AddBusinessSharpIcon fontSize="small" />
           </div>
           <div>
             <h2>Данные события</h2>
@@ -95,7 +95,7 @@ export function OrganizerPage({ onBack }: OrganizerPageProps) {
           <label className="organizer-field">
             <span>Дата старта</span>
             <div className="organizer-field__control">
-              <CalendarTodayRoundedIcon fontSize="small" />
+              <CalendarTodaySharpIcon fontSize="small" />
               <input type="date" value={form.startAt} onChange={(event) => updateField("startAt", event.target.value)} />
             </div>
           </label>
@@ -103,7 +103,7 @@ export function OrganizerPage({ onBack }: OrganizerPageProps) {
           <label className="organizer-field">
             <span>Дата окончания</span>
             <div className="organizer-field__control">
-              <CalendarTodayRoundedIcon fontSize="small" />
+              <CalendarTodaySharpIcon fontSize="small" />
               <input type="date" value={form.endAt} onChange={(event) => updateField("endAt", event.target.value)} />
             </div>
           </label>
@@ -133,7 +133,7 @@ export function OrganizerPage({ onBack }: OrganizerPageProps) {
             Отменить
           </button>
           <button className="cta-button cta-button--purple" type="submit">
-            <PublishRoundedIcon sx={{ fontSize: 18 }} />
+            <PublishSharpIcon sx={{ fontSize: 18 }} />
             Опубликовать
           </button>
         </div>

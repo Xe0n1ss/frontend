@@ -1,10 +1,10 @@
-import AdminPanelSettingsRoundedIcon from "@mui/icons-material/AdminPanelSettingsRounded";
-import AddRoundedIcon from "@mui/icons-material/AddRounded";
-import ChecklistRoundedIcon from "@mui/icons-material/ChecklistRounded";
-import WorkspacePremiumRoundedIcon from "@mui/icons-material/WorkspacePremiumRounded";
-import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
-import QueryStatsRoundedIcon from "@mui/icons-material/QueryStatsRounded";
-import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded";
+import AdminPanelSettingsSharpIcon from "@mui/icons-material/AdminPanelSettingsSharp";
+import AddSharpIcon from "@mui/icons-material/AddSharp";
+import ChecklistSharpIcon from "@mui/icons-material/ChecklistSharp";
+import WorkspacePremiumSharpIcon from "@mui/icons-material/WorkspacePremiumSharp";
+import AutoAwesomeSharpIcon from "@mui/icons-material/AutoAwesomeSharp";
+import QueryStatsSharpIcon from "@mui/icons-material/QueryStatsSharp";
+import EmojiEventsSharpIcon from "@mui/icons-material/EmojiEventsSharp";
 import type { FormEvent } from "react";
 import { useEffect, useMemo, useState } from "react";
 import { Header } from "../components/layout/Header";
@@ -253,7 +253,7 @@ export function OrganizerWorkspacePage({ platformTheme }: OrganizerWorkspacePage
           <section className="page-section">
             <article className="organizer-hero-card organizer-hero-card--workspace">
               <div className="organizer-hero-card__icon">
-                <AdminPanelSettingsRoundedIcon fontSize="small" />
+                <AdminPanelSettingsSharpIcon fontSize="small" />
               </div>
               <div>
                 <strong>Рабочее место организатора</strong>
@@ -266,27 +266,27 @@ export function OrganizerWorkspacePage({ platformTheme }: OrganizerWorkspacePage
 
             <div className="organizer-dashboard-grid">
               <article className="organizer-stat-card">
-                <ChecklistRoundedIcon fontSize="small" />
+                <ChecklistSharpIcon fontSize="small" />
                 <strong>{profile.seasonExperience.length}</strong>
                 <span>сезонов заведено</span>
               </article>
               <article className="organizer-stat-card">
-                <WorkspacePremiumRoundedIcon fontSize="small" />
+                <WorkspacePremiumSharpIcon fontSize="small" />
                 <strong>{profile.results.length}</strong>
                 <span>результатов внесено</span>
               </article>
               <article className="organizer-stat-card">
-                <AutoAwesomeRoundedIcon fontSize="small" />
+                <AutoAwesomeSharpIcon fontSize="small" />
                 <strong>{seasonOptions.length}</strong>
                 <span>сезонов в справочнике</span>
               </article>
               <article className="organizer-stat-card">
-                <QueryStatsRoundedIcon fontSize="small" />
+                <QueryStatsSharpIcon fontSize="small" />
                 <strong>{totalXp}</strong>
                 <span>общий XP по сезонам</span>
               </article>
               <article className="organizer-stat-card">
-                <EmojiEventsRoundedIcon fontSize="small" />
+                <EmojiEventsSharpIcon fontSize="small" />
                 <strong>{totalCertificates}</strong>
                 <span>сертификатов сохранено</span>
               </article>
@@ -362,7 +362,7 @@ export function OrganizerWorkspacePage({ platformTheme }: OrganizerWorkspacePage
 
                   <article className="result-card result-card--organizer">
                     <div className="result-card__icon">
-                      <WorkspacePremiumRoundedIcon fontSize="small" />
+                      <WorkspacePremiumSharpIcon fontSize="small" />
                     </div>
                     <div className="result-card__content">
                       <div className="result-card__meta">
@@ -388,7 +388,7 @@ export function OrganizerWorkspacePage({ platformTheme }: OrganizerWorkspacePage
               <form className="profile-entry-form" onSubmit={handleSeasonSubmit}>
                 <div className="profile-entry-form__header">
                   <div className="profile-entry-form__icon">
-                    <AddRoundedIcon fontSize="small" />
+                    <AddSharpIcon fontSize="small" />
                   </div>
                   <div>
                     <strong>Добавить сезонный опыт участника</strong>
@@ -518,7 +518,7 @@ export function OrganizerWorkspacePage({ platformTheme }: OrganizerWorkspacePage
               <form className="profile-entry-form" onSubmit={handleResultSubmit}>
                 <div className="profile-entry-form__header">
                   <div className="profile-entry-form__icon">
-                    <AddRoundedIcon fontSize="small" />
+                    <AddSharpIcon fontSize="small" />
                   </div>
                   <div>
                     <strong>Добавить результат участника</strong>

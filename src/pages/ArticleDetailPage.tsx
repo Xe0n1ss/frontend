@@ -1,5 +1,5 @@
-import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
-import AutoStoriesRoundedIcon from "@mui/icons-material/AutoStoriesRounded";
+import ArrowBackSharpIcon from "@mui/icons-material/ArrowBackSharp";
+import AutoStoriesSharpIcon from "@mui/icons-material/AutoStoriesSharp";
 
 type ArticleDetail = {
   id: string;
@@ -18,7 +18,7 @@ export function ArticleDetailPage({ article, onBack }: ArticleDetailPageProps) {
   return (
     <section className="page-section">
       <button className="toolbar-pill" type="button" onClick={onBack}>
-        <ArrowBackRoundedIcon fontSize="inherit" />
+        <ArrowBackSharpIcon fontSize="inherit" />
         Назад к новостям
       </button>
 
@@ -31,7 +31,7 @@ export function ArticleDetailPage({ article, onBack }: ArticleDetailPageProps) {
       <article className="detail-card">
         <div className="detail-card__header">
           <div className="detail-card__icon">
-            <AutoStoriesRoundedIcon fontSize="small" />
+            <AutoStoriesSharpIcon fontSize="small" />
           </div>
           <div>
             <strong>Коротко о материале</strong>

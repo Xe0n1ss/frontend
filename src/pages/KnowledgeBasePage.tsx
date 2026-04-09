@@ -1,6 +1,6 @@
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import AutoStoriesRoundedIcon from "@mui/icons-material/AutoStoriesRounded";
-import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import SearchSharpIcon from "@mui/icons-material/SearchSharp";
+import AutoStoriesSharpIcon from "@mui/icons-material/AutoStoriesSharp";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import { useEffect, useMemo, useState } from "react";
 import { getArticles } from "../../services/knowledge.service";
 
@@ -77,7 +77,7 @@ export function KnowledgeBasePage({ onOpenArticle }: KnowledgeBasePageProps) {
       </article>
 
       <label className="search-field search-field--light">
-        <SearchRoundedIcon fontSize="small" />
+        <SearchSharpIcon fontSize="small" />
         <input
           type="text"
           value={query}
@@ -109,7 +109,7 @@ export function KnowledgeBasePage({ onOpenArticle }: KnowledgeBasePageProps) {
         {visibleArticles.map((article) => (
           <article key={article.id} className="knowledge-card">
             <div className="knowledge-card__icon">
-              <AutoStoriesRoundedIcon fontSize="small" />
+              <AutoStoriesSharpIcon fontSize="small" />
             </div>
             <div className="knowledge-card__content">
               <div className="knowledge-card__meta">
@@ -120,7 +120,7 @@ export function KnowledgeBasePage({ onOpenArticle }: KnowledgeBasePageProps) {
               <p>{article.summary}</p>
             </div>
             <button className="knowledge-card__action" type="button" aria-label={`Открыть ${article.title}`} onClick={() => onOpenArticle(article)}>
-              <ArrowForwardIosRoundedIcon sx={{ fontSize: 14 }} />
+              <ArrowForwardIosSharpIcon sx={{ fontSize: 14 }} />
             </button>
           </article>
         ))}

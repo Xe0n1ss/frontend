@@ -1,6 +1,6 @@
-import CalendarTodayRoundedIcon from "@mui/icons-material/CalendarTodayRounded";
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import CalendarTodaySharpIcon from "@mui/icons-material/CalendarTodaySharp";
+import SearchSharpIcon from "@mui/icons-material/SearchSharp";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import { useEffect, useMemo, useState } from "react";
 import { getMembers, getTeams } from "../../services/members.service";
 import { getProfile } from "../../services/profile.service";
@@ -135,11 +135,11 @@ export function TeamBuildPage({ onOpenTeam }: TeamBuildPageProps) {
     <section className="page-section">
       <div className="search-row search-row--compact">
         <button className="icon-button" type="button" aria-label="Уведомления">
-          <SearchRoundedIcon fontSize="small" />
+          <SearchSharpIcon fontSize="small" />
         </button>
 
         <label className="search-field">
-          <SearchRoundedIcon fontSize="small" />
+          <SearchSharpIcon fontSize="small" />
           <input
             type="text"
             value={searchQuery}
@@ -149,7 +149,7 @@ export function TeamBuildPage({ onOpenTeam }: TeamBuildPageProps) {
         </label>
 
         <button className="icon-button" type="button" aria-label="Поиск">
-          <SearchRoundedIcon fontSize="small" />
+          <SearchSharpIcon fontSize="small" />
         </button>
       </div>
 
@@ -163,7 +163,7 @@ export function TeamBuildPage({ onOpenTeam }: TeamBuildPageProps) {
 
       <div className="toolbar-row">
         <button className="toolbar-pill" type="button">
-          <CalendarTodayRoundedIcon fontSize="inherit" />
+          <CalendarTodaySharpIcon fontSize="inherit" />
           Эта неделя
         </button>
 
@@ -252,7 +252,7 @@ export function TeamBuildPage({ onOpenTeam }: TeamBuildPageProps) {
                 <div className="team-card__footer">
                   <span>Участвуют в {team.eventName}</span>
                   <button className="team-card__arrow" type="button" aria-label={`Открыть ${team.name}`}>
-                    <ArrowForwardIosRoundedIcon sx={{ fontSize: 14 }} />
+                    <ArrowForwardIosSharpIcon sx={{ fontSize: 14 }} />
                   </button>
                 </div>
               </div>

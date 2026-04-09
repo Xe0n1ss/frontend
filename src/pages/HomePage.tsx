@@ -1,11 +1,11 @@
-import CalendarTodayRoundedIcon from "@mui/icons-material/CalendarTodayRounded";
+import CalendarTodaySharpIcon from "@mui/icons-material/CalendarTodaySharp";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import TuneRoundedIcon from "@mui/icons-material/TuneRounded";
-import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
-import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
-import NewspaperRoundedIcon from "@mui/icons-material/NewspaperRounded";
-import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded";
+import SearchSharpIcon from "@mui/icons-material/SearchSharp";
+import TuneSharpIcon from "@mui/icons-material/TuneSharp";
+import AttachMoneySharpIcon from "@mui/icons-material/AttachMoneySharp";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import NewspaperSharpIcon from "@mui/icons-material/NewspaperSharp";
+import EmojiEventsSharpIcon from "@mui/icons-material/EmojiEventsSharp";
 import type { KeyboardEvent } from "react";
 import { useEffect, useMemo, useState } from "react";
 import { getEvents } from "../../services/events.service";
@@ -156,7 +156,7 @@ export function HomePage({ onOpenArticle, onOpenTeam }: HomePageProps) {
     <section className="page-section home-page">
       <div className="search-row">
         <label className="search-field">
-          <SearchRoundedIcon fontSize="small" />
+          <SearchSharpIcon fontSize="small" />
           <input
             type="text"
             value={searchQuery}
@@ -166,13 +166,13 @@ export function HomePage({ onOpenArticle, onOpenTeam }: HomePageProps) {
         </label>
 
         <button className="icon-button" type="button" aria-label="Фильтры">
-          <TuneRoundedIcon fontSize="small" />
+          <TuneSharpIcon fontSize="small" />
         </button>
       </div>
 
       <div className="toolbar-row">
         <button className="toolbar-pill" type="button">
-          <CalendarTodayRoundedIcon fontSize="inherit" />
+          <CalendarTodaySharpIcon fontSize="inherit" />
           Эта неделя
         </button>
 
@@ -232,11 +232,11 @@ export function HomePage({ onOpenArticle, onOpenTeam }: HomePageProps) {
                     </div>
                     <div className="history-event__meta">
                       <span>
-                        <CalendarTodayRoundedIcon sx={{ fontSize: 14 }} />
+                        <CalendarTodaySharpIcon sx={{ fontSize: 14 }} />
                         {formatEventDate(event.startAt)}-{formatEventDate(event.endAt)}
                       </span>
                       <span>
-                        <EmojiEventsRoundedIcon sx={{ fontSize: 14 }} />
+                        <EmojiEventsSharpIcon sx={{ fontSize: 14 }} />
                         {participantAchievements[index] || "Участие подтверждено"}
                       </span>
                     </div>
@@ -279,7 +279,7 @@ export function HomePage({ onOpenArticle, onOpenTeam }: HomePageProps) {
                       <p className="event-tile__subtitle">{event.subtitle}</p>
                     </div>
                     <button className="event-tile__arrow" type="button" aria-label={`Открыть ${event.title}`}>
-                      <ArrowForwardIosRoundedIcon sx={{ fontSize: 14 }} />
+                      <ArrowForwardIosSharpIcon sx={{ fontSize: 14 }} />
                     </button>
                   </div>
 
@@ -289,14 +289,14 @@ export function HomePage({ onOpenArticle, onOpenTeam }: HomePageProps) {
                       {event.locationLabel}
                     </span>
                     <span>
-                      <CalendarTodayRoundedIcon sx={{ fontSize: 16 }} />
+                      <CalendarTodaySharpIcon sx={{ fontSize: 16 }} />
                       {formatEventDate(event.startAt)}-{formatEventDate(event.endAt)}
                     </span>
                   </div>
 
                   <div className="event-tile__footer">
                     <span className="money-pill">
-                      <AttachMoneyRoundedIcon sx={{ fontSize: 14 }} />
+                      <AttachMoneySharpIcon sx={{ fontSize: 14 }} />
                       ${event.prizePoolUsd?.toLocaleString()}
                     </span>
                     <span className="participants-inline">
@@ -344,7 +344,7 @@ export function HomePage({ onOpenArticle, onOpenTeam }: HomePageProps) {
                       })
                     }
                   >
-                    <ArrowForwardIosRoundedIcon sx={{ fontSize: 12 }} />
+                    <ArrowForwardIosSharpIcon sx={{ fontSize: 12 }} />
                   </button>
                 </div>
               ))}
@@ -360,14 +360,14 @@ export function HomePage({ onOpenArticle, onOpenTeam }: HomePageProps) {
               {highlightedNews.map((article) => (
                 <div key={article.id} className="compact-list__item compact-list__item--news">
                   <div className="compact-list__avatar compact-list__avatar--news">
-                    <NewspaperRoundedIcon sx={{ fontSize: 16 }} />
+                    <NewspaperSharpIcon sx={{ fontSize: 16 }} />
                   </div>
                   <div className="compact-list__content">
                     <strong>{article.title}</strong>
                     <span>{article.readTime}</span>
                   </div>
                   <button className="compact-list__action" type="button" aria-label={`Открыть ${article.title}`} onClick={() => onOpenArticle(article)}>
-                    <ArrowForwardIosRoundedIcon sx={{ fontSize: 12 }} />
+                    <ArrowForwardIosSharpIcon sx={{ fontSize: 12 }} />
                   </button>
                 </div>
               ))}

@@ -32,14 +32,16 @@ function App() {
           </button>
         </div>
 
-        <button
-          type="button"
-          className="theme-toggle"
-          onClick={() => setUiTheme(isDarkTheme ? "light" : "dark")}
-          aria-label="Переключить тему"
-        >
-          {isDarkTheme ? "Тема: Dark" : "Тема: Light"}
-        </button>
+        <label className="theme-switch" aria-label="Переключить тему">
+          <input
+            type="checkbox"
+            checked={isDarkTheme}
+            onChange={() => setUiTheme(isDarkTheme ? "light" : "dark")}
+            aria-label="Тёмная тема"
+          />
+          <span className="theme-switch__track" />
+          <span className="theme-switch__label">{isDarkTheme ? "Dark" : "Light"}</span>
+        </label>
       </div>
 
       {siteMode === "participant" ? (

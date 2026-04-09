@@ -1,4 +1,4 @@
-import SaveRoundedIcon from "@mui/icons-material/SaveRounded";
+import SaveSharpIcon from "@mui/icons-material/SaveSharp";
 import { useEffect, useState } from "react";
 import { getMe, updateMe, type AuthUser } from "../../services/auth.service";
 
@@ -119,7 +119,7 @@ export function ProfileSetupPage({ mode, onSaved, onNavigate }: ProfileSetupPage
       <form className="auth-card auth-form" onSubmit={handleSubmit}>
         <div className="auth-card__header">
           <div className="study-card__icon">
-            <SaveRoundedIcon fontSize="small" />
+            <SaveSharpIcon fontSize="small" />
           </div>
           <div>
             <h2>Данные участника</h2>
