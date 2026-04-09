@@ -5,12 +5,23 @@ const client = axios.create({
   timeout: 5000,
 });
 
+let currentToken = "";
+
+export function setApiToken(token: string) {
+  currentToken = token || "";
+}
+
 function getAuthToken() {
+  if (currentToken) {
+    return currentToken;
+  }
+
   if (typeof window === "undefined") {
     return import.meta.env.VITE_AUTH_TOKEN || "";
   }
 
   return (
+    window.localStorage.getItem("yahacks-auth-token") ||
     window.localStorage.getItem("yahacks_access_token") ||
     window.localStorage.getItem("access_token") ||
     window.localStorage.getItem("token") ||

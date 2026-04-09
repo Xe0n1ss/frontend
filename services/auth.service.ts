@@ -139,6 +139,32 @@ export function clearSession() {
   setApiToken("");
 }
 
+export function startDemoSession(profile: "nastya" = "nastya") {
+  const demoUser: AuthUser =
+    profile === "nastya"
+      ? {
+          id: "demo-nastya",
+          email: "nastya@example.com",
+          fullName: "Настя — фронтенд",
+          role: "frontend",
+          skills: ["React", "TypeScript", "UI"],
+          timezone: "Europe/Moscow",
+          bio: "Demo session user",
+          githubUsername: "nastya-ui",
+        }
+      : {
+          id: "demo-user",
+          email: "demo@example.com",
+          fullName: "Demo User",
+          role: "frontend",
+          skills: ["React"],
+          timezone: "Europe/Moscow",
+        };
+
+  saveSession("demo-token", demoUser);
+  return demoUser;
+}
+
 export async function login(payload: LoginPayload) {
   const response = await api.post<AuthResponse>("/auth/login", payload);
   const user = normalizeAuthUser(response.user);

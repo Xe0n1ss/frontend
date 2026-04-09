@@ -1,7 +1,7 @@
 import LoginSharpIcon from "@mui/icons-material/LoginSharp";
 import PersonAddAlt1SharpIcon from "@mui/icons-material/PersonAddAlt1Sharp";
-import { useState } from "react";
-import { login, register, type RegisterPayload } from "../../services/auth.service";
+import { useEffect, useState } from "react";
+import { login, register, startDemoSession, type RegisterPayload } from "../../services/auth.service";
 
 const tabs = ["Вход", "Регистрация"] as const;
 
@@ -28,12 +28,28 @@ export function AuthPage({ onAuthSuccess, onNavigate }: AuthPageProps) {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("demo") === "nastya") {
+      startDemoSession("nastya");
+      onAuthSuccess();
+      onNavigate("profile");
+    }
+  }, [onAuthSuccess, onNavigate]);
+
   async function handleLoginSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSubmitting(true);
     setError("");
 
     try {
+      if (loginState.email.trim().toLowerCase() === "admin" && loginState.password === "admin") {
+        startDemoSession("nastya");
+        onAuthSuccess();
+        onNavigate("profile");
+        return;
+      }
+
       await login(loginState);
       onAuthSuccess();
       onNavigate("profile");
@@ -102,17 +118,17 @@ export function AuthPage({ onAuthSuccess, onNavigate }: AuthPageProps) {
             </div>
             <div>
               <h2>Войти в профиль</h2>
-              <p>Используй email и пароль участника.</p>
+              <p>Используй email и пароль участника. Для демо: admin/admin или /auth?demo=nastya.</p>
             </div>
           </div>
 
           <label className="auth-field">
             <span>Email</span>
             <input
-              type="email"
+              type="text"
               value={loginState.email}
               onChange={(event) => setLoginState((current) => ({ ...current, email: event.target.value }))}
-              placeholder="alex@example.com"
+              placeholder="alex@example.com или admin"
               required
             />
           </label>

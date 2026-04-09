@@ -49,7 +49,7 @@ const placeholderContent = {
   },
 };
 
-function HackathonsPage({ platformTheme, initialScreen = screenMap.home, domains }) {
+function HackathonsPage({ platformTheme, initialScreen = screenMap.home, domains, onPrimaryNavigate }) {
   const [activeScreen, setActiveScreen] = useState(initialScreen);
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [selectedTeam, setSelectedTeam] = useState(null);
@@ -156,7 +156,14 @@ function HackathonsPage({ platformTheme, initialScreen = screenMap.home, domains
     <div className={`app-shell app-shell--${platformTheme}`}>
       {headerContent}
       <main className="app-screen">{screenContent}</main>
-      <BottomNav activeTab={bottomNavKey} onChange={setActiveScreen} domains={domains} />
+      <BottomNav
+        activeTab={bottomNavKey}
+        onChange={(tab) => {
+          setActiveScreen(tab);
+          onPrimaryNavigate?.(tab);
+        }}
+        domains={domains}
+      />
     </div>
   );
 }
