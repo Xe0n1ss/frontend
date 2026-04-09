@@ -33,7 +33,6 @@ export function usePlatformTheme() {
   useEffect(() => {
     const root = document.documentElement;
     root.dataset.platform = platformTheme;
-    root.style.setProperty("color-scheme", "light");
 
     return () => {
       delete root.dataset.platform;
