@@ -1,16 +1,21 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import HackathonsPage from "./pages/HackathonsPage";
 import { OrganizerWorkspacePage } from "./pages/OrganizerWorkspacePage";
 import "./App.css";
 import { usePlatformTheme } from "./hooks/usePlatformTheme";
-import { useUiTheme } from "./hooks/useUiTheme";
 import { getDomainRoutingConfig } from "./config/domainRouting";
 
 function App() {
   const platformTheme = usePlatformTheme();
-  const { isDarkTheme, setUiTheme } = useUiTheme();
   const routingConfig = useMemo(() => getDomainRoutingConfig(), []);
   const [siteMode, setSiteMode] = useState(routingConfig.siteMode);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.dataset.uiTheme = "dark";
+    root.style.setProperty("color-scheme", "dark");
+    window.localStorage.setItem("ui-theme", "dark");
+  }, []);
 
   return (
     <div className="site-mode-layout">
@@ -32,16 +37,6 @@ function App() {
           </button>
         </div>
 
-        <label className="theme-switch" aria-label="Переключить тему">
-          <input
-            type="checkbox"
-            checked={isDarkTheme}
-            onChange={() => setUiTheme(isDarkTheme ? "light" : "dark")}
-            aria-label="Тёмная тема"
-          />
-          <span className="theme-switch__track" />
-          <span className="theme-switch__label">{isDarkTheme ? "Dark" : "Light"}</span>
-        </label>
       </div>
 
       {siteMode === "participant" ? (

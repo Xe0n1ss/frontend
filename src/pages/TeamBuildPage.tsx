@@ -177,9 +177,7 @@ export function TeamBuildPage({ onOpenTeam }: TeamBuildPageProps) {
           <button
             key={chip}
             type="button"
-            className={`chip ${activeFilters.includes(chip) ? "chip--active" : ""} ${
-              chip === "UX/UI" || chip === "AI news" ? "chip--purple" : ""
-            }`}
+            className={`chip ${activeFilters.includes(chip) ? "chip--active" : ""}`}
             onClick={() => toggleFilter(chip)}
           >
             {chip}

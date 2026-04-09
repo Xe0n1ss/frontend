@@ -140,17 +140,8 @@ export function HomePage({ onOpenArticle, onOpenTeam }: HomePageProps) {
     () => visibleEvents.filter((event) => getEventStatus(event).tone !== "past"),
     [visibleEvents]
   );
-  const completedEvents = useMemo(
-    () => visibleEvents.filter((event) => getEventStatus(event).tone === "past").slice(0, 2),
-    [visibleEvents]
-  );
   const featuredEvent = futureEvents[0];
   const sideEvents = futureEvents.slice(1, 5);
-  const participantAchievements = [
-    "Финалист сезона",
-    "Лучший UI/UX питч",
-    "Сильная командная работа",
-  ];
 
   return (
     <section className="page-section home-page">
@@ -186,7 +177,7 @@ export function HomePage({ onOpenArticle, onOpenTeam }: HomePageProps) {
           <button
             key={chip}
             type="button"
-            className={`chip ${selectedChip === chip ? "chip--active" : ""} ${chip === "AI" ? "chip--purple" : ""}`}
+            className={`chip ${selectedChip === chip ? "chip--active" : ""}`}
             onClick={() => setSelectedChip(chip)}
           >
             {chip}
@@ -197,60 +188,6 @@ export function HomePage({ onOpenArticle, onOpenTeam }: HomePageProps) {
       {loading && <div className="state-card">Загружаем историю участника, будущие хакатоны и новости...</div>}
       {error && <div className="state-card state-card--error">{error}</div>}
       {!loading && !error && visibleEvents.length === 0 && <div className="state-card">По выбранным фильтрам пока ничего не найдено</div>}
-
-      {!loading && !error && (
-        <section className="home-section">
-          <div className="home-section__header">
-            <h2>Хакатоны, которые участник уже прошёл</h2>
-            <span className="section-note">{completedEvents.length} завершённых</span>
-          </div>
-
-          {completedEvents.length > 0 && (
-            <article className="history-panel">
-              <div className="history-panel__summary">
-                <div className="history-panel__copy">
-                  <span className="history-panel__eyebrow">Профиль участника</span>
-                  <h3>Участник уже прошёл {completedEvents.length} хакатона и собрал достижения за сезон</h3>
-                  <p>Показываем завершённые участия как персональный блок, а ниже оставляем только будущие события для следующего шага.</p>
-                </div>
-
-                <div className="history-panel__stats">
-                  <strong>{completedEvents.length}</strong>
-                  <span>участий завершено</span>
-                </div>
-              </div>
-
-              <div className="history-panel__events">
-                {completedEvents.map((event, index) => (
-                  <div key={event.id} className="history-event">
-                    <div className="history-event__head">
-                      <div>
-                        <strong>{event.title}</strong>
-                        <span>{event.locationLabel}</span>
-                      </div>
-                      <span className="event-tile__status event-tile__status--past">Завершён</span>
-                    </div>
-                    <div className="history-event__meta">
-                      <span>
-                        <CalendarTodaySharpIcon sx={{ fontSize: 14 }} />
-                        {formatEventDate(event.startAt)}-{formatEventDate(event.endAt)}
-                      </span>
-                      <span>
-                        <EmojiEventsSharpIcon sx={{ fontSize: 14 }} />
-                        {participantAchievements[index] || "Участие подтверждено"}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </article>
-          )}
-
-          {completedEvents.length === 0 && (
-            <div className="state-card">Когда участник завершит первый хакатон, здесь появится история участия и достижения за сезон.</div>
-          )}
-        </section>
-      )}
 
       {!loading && !error && featuredEvent && (
         <section className="home-section">
